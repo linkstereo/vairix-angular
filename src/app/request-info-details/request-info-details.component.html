@@ -1,0 +1,19 @@
+<table class="tg">
+    <thead>
+    <tr>
+        <td class="tg-0lax">ID</td>
+        <td class="tg-0lax">timestamp</td>
+        <td class="tg-0lax">Nombre del Servicio</td>
+    </tr>
+    </thead>
+    <tbody>
+    @for (requestInfo of requestInfos; track requestInfo) {
+    <tr>
+        <td class="tg-0lax">{{requestInfo.id}}</td>
+            <td class="tg-0lax">{{requestInfo.timestamp}}</td>
+            <td class="tg-0lax">{{requestInfo.serviceNameRequested}}</td>
+        </tr>
+    }
+    </tbody>
+
+</table>
