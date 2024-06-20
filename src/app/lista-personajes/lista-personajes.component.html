@@ -1,0 +1,19 @@
+<table class="tg">
+    <thead>
+    <tr>
+        <td class="tg-0lax">ID</td>
+        <td class="tg-0lax">nombre</td>
+        <td class="tg-0lax">descripcion</td>
+    </tr>
+    </thead>
+    <tbody>
+    @for (character of characters; track character) {
+        <tr>
+            <td class="tg-0lax">{{character.id}}</td>
+            <td class="tg-0lax">{{character.name}}</td>
+            <td class="tg-0lax">{{character.description}}</td>
+        </tr>
+    }
+    </tbody>
+
+</table>
