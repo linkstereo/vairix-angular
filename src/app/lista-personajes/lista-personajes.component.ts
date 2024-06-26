@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {RestApiClientService} from "../rest-api-clien-service/rest-api-client.service";
 import {Character} from "../dto/character";
 
@@ -12,6 +12,9 @@ import {Character} from "../dto/character";
 export class ListaPersonajesComponent implements OnInit {
     characters: Character[] = [];
 
+    //@Input() verDetailsInput: string;
+    @Output() verDetailsOutput = new EventEmitter<string>();
+
   constructor(private restApiClient: RestApiClientService) {
   }
 
@@ -20,8 +23,11 @@ export class ListaPersonajesComponent implements OnInit {
       var characters = this.restApiClient.getCharacters()
         .subscribe( (data) => {
           this.characters = data;
-          console.log(data);
         });
   }
+
+    showCharacterDetails(id: any) {
+      this.verDetailsOutput.emit(id);
+    }
 
 }

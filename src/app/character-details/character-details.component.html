@@ -1,0 +1,175 @@
+<h1>Descripcion General del personaje</h1>
+<table class="tg">
+    <thead>
+    <tr>
+        <td class="tg-0lax">Campo</td>
+        <td class="tg-0lax">descripcion</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+            <td class="tg-0lax">ID</td>
+            <td class="tg-0lax">{{character.id}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">NAME</td>
+        <td class="tg-0lax">{{character.name}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">DESCRIPCION</td>
+            <td class="tg-0lax">{{character.description}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">MODIFIED</td>
+            <td class="tg-0lax">{{character.modified}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">thumbnail</td>
+            <td class="tg-0lax"><img src="{{character.thumbnail.path}}" alt="" width="60" height="60"></td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">resouceURI</td>
+        <td class="tg-0lax">{{character.resourceURI}}</td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+<h1>Comics del personaje</h1>
+<table class="tg">
+    <thead>
+    <tr>
+        <td class="tg-0lax">Campo</td>
+        <td class="tg-0lax">descripcion</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="tg-0lax">available</td>
+        <td class="tg-0lax">{{character.comics.available}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">collectionURI</td>
+        <td class="tg-0lax">{{character.comics.collectionURI}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">Returned</td>
+        <td class="tg-0lax">{{character.comics.returned}}</td>
+    </tr>
+    @for (item of character.comics.items; track item) {
+    <tr>
+        <td class="tg-0lax">resourceURI</td>
+        <td class="tg-0lax">{{item.resourceURI}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">name</td>
+        <td class="tg-0lax">{{item.returned}}</td>
+    </tr>
+    }
+    </tbody>
+
+</table>
+<h1>Series del personaje</h1>
+<table class="tg">
+    <thead>
+    <tr>
+        <td class="tg-0lax">Campo</td>
+        <td class="tg-0lax">descripcion</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="tg-0lax">available</td>
+        <td class="tg-0lax">{{character.series.available}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">collectionURI</td>
+        <td class="tg-0lax">{{character.series.collectionURI}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">Returned</td>
+        <td class="tg-0lax">{{character.series.returned}}</td>
+    </tr>
+    @for (item of character.series.items; track item) {
+    <tr>
+        <td class="tg-0lax">resourceURI</td>
+        <td class="tg-0lax">{{item.resourceURI}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">name</td>
+        <td class="tg-0lax">{{item.returned}}</td>
+    </tr>
+    }
+    </tbody>
+
+</table>
+<h1>Stories del personaje</h1>
+<table class="tg">
+    <thead>
+    <tr>
+        <td class="tg-0lax">Campo</td>
+        <td class="tg-0lax">descripcion</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="tg-0lax">available</td>
+        <td class="tg-0lax">{{character.stories.available}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">collectionURI</td>
+        <td class="tg-0lax">{{character.stories.collectionURI}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">Returned</td>
+        <td class="tg-0lax">{{character.stories.returned}}</td>
+    </tr>
+    @for (item of character.stories.items; track item) {
+    <tr>
+        <td class="tg-0lax">resourceURI</td>
+        <td class="tg-0lax">{{item.resourceURI}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">name</td>
+        <td class="tg-0lax">{{item.returned}}</td>
+    </tr>
+    }
+    </tbody>
+
+</table>
+<h1>Events del personaje</h1>
+<table class="tg">
+    <thead>
+    <tr>
+        <td class="tg-0lax">Campo</td>
+        <td class="tg-0lax">descripcion</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="tg-0lax">available</td>
+        <td class="tg-0lax">{{character.events.available}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">collectionURI</td>
+        <td class="tg-0lax">{{character.events.collectionURI}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">Returned</td>
+        <td class="tg-0lax">{{character.events.returned}}</td>
+    </tr>
+    @for (item of character.events.items; track item) {
+    <tr>
+        <td class="tg-0lax">resourceURI</td>
+        <td class="tg-0lax">{{item.resourceURI}}</td>
+    </tr>
+    <tr>
+        <td class="tg-0lax">name</td>
+        <td class="tg-0lax">{{item.returned}}</td>
+    </tr>
+    }
+    </tbody>
+
+</table>
+

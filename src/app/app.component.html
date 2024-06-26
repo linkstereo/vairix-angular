@@ -6,8 +6,9 @@
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
-      <app-lista-personajes *ngIf="verListaDePersonajes"></app-lista-personajes>
+      <app-lista-personajes (verDetailsOutput)="verDetails($event)" *ngIf="verListaDePersonajes"></app-lista-personajes>
       <app-request-info-details *ngIf="verInfoRequests"></app-request-info-details>
+      <app-character-details [currentCharacter]="currentCharacter" *ngIf="verCharacterDetails"></app-character-details>
     </div>
   </div>
 </main>

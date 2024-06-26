@@ -47,6 +47,17 @@ export class RestApiClientService {
 
     }
 
+    getCharacter(id: any): Observable<Character> {
+        this.checkAndUpdateToken();
+        return this.httpClient.get<Character>(
+            this.baseURL + '/characters/' + id,
+            {headers: new HttpHeaders({
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("auth-token")
+                })})
+
+    }
+
     register() {
            return this.httpClient.post<Token>(
                 this.baseURL + '/jwt/register',
